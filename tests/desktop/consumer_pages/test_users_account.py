@@ -105,7 +105,13 @@ class TestAccounts(BaseTest):
 
         Assert.true(basic_info.is_recommended_tab_visible)
 
+<<<<<<< HEAD
         basic_info.toggle_recommendations()
         basic_info.save_changes()
+=======
+        basic_info.disable_recommendations()
+        basic_info.save_changes()
+        basic_info.wait_for_recommended_tab_not_visible()
+>>>>>>> bf8d183581c2576de31465319a4bf7d9ea799125
 
         Assert.false(basic_info.is_recommended_tab_visible)
